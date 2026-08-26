@@ -1,0 +1,47 @@
+1. Etapas Realizadas
+Etapa 1: Definição
+Problema: Necessidade de um método automatizado e rápido em terminal para registrar pedidos de clientes no caixa.
+Objetivo: Desenvolver uma aplicação de console que registre o cliente, adicione produtos, calcule o total e registre o pagamento.
+
+Etapa 2: Análise
+Funcionalidades: Leitura de dados, exibição de catálogo, soma cumulativa de valores e geração de recibo final.
+Regras: O loop de compra só encerra quando o usuário digita 0. Se nenhum produto for comprado, o sistema encerra sem pedir pagamento.
+
+Etapa 3: Projeto
+Arquitetura: Aplicação Console em C#. Uso de List<Produto> para o catálogo em memória e List<string> para guardar os nomes dos itens comprados. Estrutura sequencial (while para a compra, seguido pelas perguntas de encerramento), respeitando o fluxo do modelo Cascata.
+
+3. Testes Realizados
+Teste 1: Fluxo de compra completo (Caminho Feliz)
+Situação testada: Inserir nome "Iuri", adicionar IDs 1 e 2, finalizar (0) e pagar em "Pix".
+Resultado esperado: Somar R$ 230,00 e exibir recibo com os dados corretos.
+Resultado obtido: O sistema somou corretamente e imprimiu o recibo final validando a operação. Sucesso.
+
+Teste 2: Desistência de compra
+Situação testada: Inserir nome "Maria" e digitar 0 na primeira escolha de produto.
+Resultado esperado: Encerrar sem perguntar o pagamento.
+Resultado obtido: Mensagem "Venda cancelada" exibida e programa finalizado corretamente via comando return. Sucesso.
+
+1. Respostas às Perguntas Propostas
+O que já existia no primeiro incremento?
+O catálogo de produtos, a lógica de inserção no carrinho e a listagem dos itens escolhidos.
+
+O que foi acrescentado no segundo?
+Cálculo matemático do total, capacidade de remover itens do carrinho e registro do método de pagamento.
+
+O que precisou ser alterado na primeira versão?
+O comando de leitura (ReadLine) foi ajustado para aceitar números negativos (para remover itens) e o loop de exibição final foi alterado para acumular o valor total.
+
+2. Alteração de Requisito (Desconto de 10% para > R$ 500)
+Em qual incremento essa funcionalidade poderia ser incorporada e por quê?
+Essa regra entraria em um novo Incremento (Incremento 3). A essência do modelo Incremental é entregar fatias funcionais. Se o Incremento 2 (que calcula o total) já foi entregue e validado, a nova regra de desconto é tratada como uma nova evolução do sistema que será construída sobre a base sólida que já calcula o valor da compra.
+
+O desenvolvimento que nós realizamos caracteriza um modelo Incremental porque não entregamos o sistema inteiro apenas no final do projeto (como faríamos no modelo Cascata). Em vez disso, nós o construímos e entregamos em fatias menores e funcionais, que chamamos de incrementos.
+Entregas parciais que funcionam sozinhas: Ao final do Incremento 1, nós já tínhamos um mini-sistema capaz de cadastrar salas, cadastrar responsáveis e listar esses dados. Se entregássemos apenas isso para o cliente, ele já conseguiria usar o sistema para alimentar o banco de dados.
+
+Evolução contínua (Construir em cima do que já existe): No Incremento 2, nós não precisamos apagar e refazer o código. Nós pegamos a base do Incremento 1, que já estava validada, e apenas adicionamos uma nova camada de funcionalidades (cruzar os dados para fazer a reserva e informar data/hora).
+
+Agregação de valor a cada etapa: A cada novo incremento, o software que desenvolvemos "cresceu" e ficou mais completo, entregando mais valor ao cliente sem quebrar o que já havíamos testado nas etapas anteriores.
+
+João Vitor Santana
+Iuri
+Angelo
