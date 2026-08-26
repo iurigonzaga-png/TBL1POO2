@@ -1,0 +1,13 @@
+    1. O que já existia no primeiro incremento?
+    A definição da lista de produtos (catálogo).
+    A opção de adicionar os produtos ao carrinho digitando o ID.
+    A exibição de quais itens estavam dentro do carrinho no final da execução.
+    
+    2. O que foi acrescentado no segundo?
+    A opção de remover produtos do carrinho.
+    O cálculo do valor total da compra.
+    A entrada para o cliente escolher a forma de pagamento.
+    
+    3. O que precisou ser alterado na primeira versão?
+    A lógica de leitura (input): O código que lia o ID do produto precisou ser adaptado para aceitar números negativos (ex: -1) para saber quando o usuário queria remover um item em vez de adicionar.
+    O laço de exibição: O bloco que apenas mostrava os nomes dos itens no final foi alterado para incluir uma variável matemática (total += item.Preco) que soma os valores enquanto exibe a lista.
